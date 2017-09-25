@@ -1,0 +1,27 @@
+{
+  "name": "cms-templates-5",
+  "version": "1.0.0",
+  "description": "Front end files for the UCSD Cascade CMS templates.",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UCSD/cms-templates.git"
+  },
+  "keywords": [
+    "CMS",
+    "CMS",
+    "templates",
+    "Decorator",
+    "Decorator",
+    "5"
+  ],
+  "author": "Cristian Horta, WTS, UC San Diego",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UCSD/cms-templates/issues"
+  },
+  "homepage": "https://github.com/UCSD/cms-templates#readme"
+}
