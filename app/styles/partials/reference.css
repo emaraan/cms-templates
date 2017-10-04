@@ -22,7 +22,8 @@
 
 .drawer-toggle a, .drawer h2 a,
 .flex-pauseplay a {
-  background: url(img/sprite_icon_widget.png) no-repeat transparent; }
+  background: url(img/sprite_icon_widget.svg) no-repeat transparent;
+  background-size: 16px 300px; }
 
 div.loading {
   background: url(img/icon_loading.gif) no-repeat transparent; }

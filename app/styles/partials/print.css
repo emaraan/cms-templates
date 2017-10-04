@@ -28,6 +28,9 @@
     background-color: #ccc !important; }
 
   .main-content-nav {
-    background: none; } }
+    background: none; }
+
+  a[href]:after {
+    content: none !important; } }
 
 /*# sourceMappingURL=print.css.map */

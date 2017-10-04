@@ -1,25 +1,25 @@
 /********************* VARIABLES & MIXINS */
-@import "partials/variables";
-@import "partials/custom-variables"; //vitro variables
+@import "partials/variables.scss";
+@import "partials/custom-variables.scss"; //vitro variables
 
 /********************* GOOGLE FONT */
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 /********************* BASE */
-@import "partials/reference";
-@import "partials/layout";
-@import "partials/modules"; 
-@import "partials/navbar"; 
-@import "partials/ucsd/base/styling";
+@import "partials/reference.scss";
+@import "partials/layout.scss";
+@import "partials/modules.scss";
+@import "partials/navbar.scss";
+@import "partials/ucsd/base/styling.scss";
+@import "partials/components.scss";
 
 /********************* VITRO MODULES */
-@import "partials/vitro-modules";
+@import "partials/vitro-modules.scss";
 
 /********************* OVERWRITES */
-@import "partials/ucsd/cms/overwrite";
+@import "partials/ucsd/cms/overwrite.scss";
 
 /********************* CMS */
-@import "../vendor/flexslider/flexslider";
-@import "partials/ucsd/cms/drawer";
+@import "partials/ucsd/cms/drawer.scss";
 
-@import "partials/print"; 
+@import "partials/print.scss";
