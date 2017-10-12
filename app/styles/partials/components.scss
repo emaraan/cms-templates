@@ -8,6 +8,9 @@
 
   .container {
       padding: 7% 0;
+      position: absolute;
+      top:0;
+      left: 10%;
   }
 
 }
@@ -21,7 +24,6 @@
   background-color: #777;
 }
 .carousel-inner > .item > img {
-  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
