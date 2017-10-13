@@ -46,7 +46,7 @@
 }
 
 .search-toggle {
-  color: #fff !important;		
+  color: #fff !important;
   max-height: 38px;
 
   background-color: transparent !important;
@@ -60,7 +60,7 @@
 
   &:hover,
   &.search-is-open {
-	color: darken(#fff, 15%);  
+	color: darken(#fff, 15%);
     background-color: transparent;
     border-color: none;
     text-decoration: none;
@@ -138,13 +138,13 @@
   }
 
   @media only screen and (max-width: $mobile) {
-	display: none;  
+	display: none;
     margin-top: 2.25em;
   }
   @media only screen and (max-width: $mobile-small) {
     font-size: 20px;
     margin-top: 2em;
-  } 
+  }
 }
 
 .title-header-large {
@@ -174,7 +174,7 @@
   @media only screen and (max-width: $desktop-small) {
     display: block;
     position: absolute;
-    
+
   }
 }
 
@@ -193,7 +193,7 @@
 #site-logo img {
     max-width: 100%;
     height: auto;
-    margin-top: 30px;
+    margin-top: 0;
     margin-bottom: 15px;
     @media (max-width: $desktop-small) {
 	    display: none;
@@ -250,12 +250,12 @@
       background-color: #fff;
       padding: 1em 0 1em 1em;
 	  font-weight: bold;
-	  
+
 	  > ul li a {
 		  color: #006a96;
 		  padding-left: 0 !important;
 	  }
-	  
+
       > a {
         color: #006a96;
       }

@@ -127,9 +127,9 @@
 		                </form>
 		            </div>
 		        </div>
-	        </li>
+	       </li>
 		  </ul>
-		</div><!--/.nav-collapse -->
+		</div><!-- end nav-collapse -->
 
     <!-- bootstrap offcanvas.js -->
     <div class="navmenu navmenu-default navmenu-fixed-left offcanvas" style="">
@@ -179,7 +179,7 @@
 	<div class="layout-container row">
 
 	<!-- Begin Text and CTA w/Full Height Image Left module -->
-	<section class="jumbotron side-image-white" data-module="text-and-cta-with-full-height-image-left">
+	<section class="jumbotron side-image-white">
 		<div class="container">
 		    <div class="row">
 
@@ -417,6 +417,15 @@
 <!-- build:js scripts/bootstrap.js -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <!-- endbuild -->
+
+<script src="vendor/bootstrap-hover-dropdown/bootstrap-hover-dropdown-min.js"></script>
+
+<script>
+  // very simple to use!
+  $(document).ready(function() {
+    $('.js-activated').dropdownHover().dropdown();
+  });
+</script>
 
 
 <!-- Google Search -->

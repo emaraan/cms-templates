@@ -23,7 +23,7 @@ html, body
 }
   /* container will have media queries for sizing*/
 
-  .layout-container { 
+  .layout-container {
     max-width: $full;
     width: 98%;
     margin: 0px auto;
@@ -182,6 +182,9 @@ header
 
 nav
 {
+  .container {
+    padding: 0;
+  }
 }
 
 .navbar-list {
@@ -235,11 +238,11 @@ nav
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
     background-color: darken(#006a96, 10%);
     color: #fff;
-}    
+}
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
 	background-color: darken(#006a96, 10%);
 	color: #fff;
-}	  
+}
 .dropdown-menu {
 	background-color: darken(#006a96, 10%);
 }
@@ -352,7 +355,7 @@ main
  * FOOTER
  * **************/
 
-footer 
+footer
 {
 	background-color: #006A96;
 }
@@ -378,12 +381,12 @@ footer
       border-right: 1px solid #fff;
     }
   }
-  
+
 .footer .row {
 	padding: 1.5em .5em;
 	color: #fff;
 	font-size: .9em;
-}  
+}
 .footer-logo {
 	width: 158px;
 	height: 30px;
@@ -392,4 +395,4 @@ footer
 		float: none;
 		margin-top: 15px;
 	}
-} 
+}

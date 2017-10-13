@@ -47,7 +47,7 @@
 #site-logo {
 	margin-top: 0;
 	@media (min-width: $desktop-small) {
-		margin-top: 60px;
+		margin-top: 0;
 	}
 }
 
@@ -252,7 +252,7 @@
 	background-color: $blue;
 	padding: 30px 0 !important;
 	border-radius: 0 !important;
-	h2, h3, p, a, a:hover {color: #fff;}
+	h2, h3, p, li, a, a:hover {color: #fff;}
 	.panel {
 		background-color: transparent;
 		margin: 0 15px 20px 15px;
