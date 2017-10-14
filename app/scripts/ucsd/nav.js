@@ -1,8 +1,14 @@
+$(document).ready(function() {
+  $('.js-activated').dropdownHover().dropdown();
+  FastClick.attach(document.body);
+});
+
+
 (function(document) {
   var desktop = 960;
   var mobileBreakpoint = 640;
   var navListIsOpened = undefined;
-
+/*
   var mainNav = function() {
     var navBtn = $('.btn-nav')[0];
     var navList = $('.navdrawer-container')[0];
@@ -64,8 +70,8 @@
         toggleMainNav();
       })
     }
-  };
-
+  };*/
+/*
   var mainSubNav = function() {
     var subNavArray = $('.navbar-subnav'),
       subListArray = $('.navbar-sublist'),
@@ -74,13 +80,13 @@
       subNavIsOpened = false;
     var preIndex;
 
-    /* if there are subNav elements run */
+    // if there are subNav elements run
     if (subNavArray) {
       subNavArray.each(function(index) {
         var subNav = subNavArray[index],
           subList = subListArray[index];
 
-        /* relocated toggleSubNav function due to variable scoping issues */
+        // relocated toggleSubNav function due to variable scoping issues
         var toggleSubNav = function() {
           // check if subList opened, reset if antoher is already opened
           checkToggleSubNav();
@@ -151,9 +157,11 @@
         }
       });
     }
-  };
+  };*/
 
   var mainSearch = function() {
+
+
     var searchBtn = $('.search-toggle')[0];
     var searchContent = $('.search-content')[0];
     var searchOpen = 'search-is-open';
@@ -233,8 +241,9 @@
     }
   }
 
-  mainNav();
-  mainSubNav();
+  //mainNav();
+  //mainSubNav();
+
   mainSearch();
 
   document.addEventListener('DOMContentLoaded', function(e) {
@@ -246,7 +255,7 @@
       }
     }
   });
-
+/*
   $(window).resize(function() {
     if ($(window).width() > desktop && navListIsOpened !== undefined) {
       // reset css to be compatible with media queries
@@ -279,5 +288,5 @@
     if ($(window).width() > desktop) {
       checkMenuHeight();
     }
-  });
+  });*/
 })(document);

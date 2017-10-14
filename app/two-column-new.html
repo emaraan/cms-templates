@@ -11,13 +11,13 @@
     <meta name="PAGETITLE" content="School of Global Policy & Strategy">
     <meta name="DESCRIPTION" content="A community dedicated to the advancement of knowledge through teaching, research and engagement.">
 
-    <link rel="stylesheet" href="styles/bootstrap.css"/>
-
-	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/css/jasny-bootstrap.css"/>
-
-    <link rel="stylesheet" href="styles/base.css"/>
-
-    <link rel="stylesheet" href="styles/homepage.css">
+    <!--build:css css/bootstrap.min.css-->
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <!--endbuild-->
+    <!--build:css css/base.min.css-->
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="vendor/jasny-bootstrap/css/jasny-bootstrap.css"/>
+    <!--endbuild-->
 
     <!--[if lt IE 9]>
     <link rel="stylesheet" href="styles/ie-support.css"/>
@@ -98,7 +98,7 @@
 		  <ul class="nav navbar-nav">
 		    <li class="active"><a href="index.html">Home</a></li>
 		    <li class="dropdown">
-		    	<a href="templates.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Templates <span class="caret"></span></a>
+		    	<a href="templates.html" class="dropdown-toggle" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Templates <span class="caret"></span></a>
 		    	<ul class="dropdown-menu">
 			    	<li><a href="two-column-new.html">Two Columns (NEW)</a></li>
 			    	<li><a href="homepage-new.html">Homepage (NEW)</a></li>
@@ -463,19 +463,30 @@
 		        </ul>
 	        </div>
 	        <div class="col-sm-4">
-		        <img src="styles/img/ucsd-footer-logo-white.png" alt="" class="img-responsive footer-logo" />
+		        <img src="img/ucsd-footer-logo-white.png" alt="" class="img-responsive footer-logo" />
 		    </div>
 		</div>
 	</div>
 </footer>
 
-<script src="https://cdn.ucsd.edu/cms/decorator-4.5/scripts/jquery.min.js"></script>
+<!--build:js scripts/jquery.min.js -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<!-- endbuild -->
 
-<!-- offcanvas.js CDN -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/js/jasny-bootstrap.js"></script>
+<!--build:js scripts/bootstrap.min.js -->
+<script src="vendor/bootstrap/assets/javascripts/bootstrap.min.js"></script>
+<!-- endbuild -->
 
 <script src="https://www.ucsd.edu/common/_emergency-broadcast/message.js"></script>
+
+
 <!--build:js scripts/base.min.js -->
+<script src="vendor/flexslider/jquery.flexslider.js"></script>
+<script src="vendor/fastclick/lib/fastclick.js"></script>
+<script src="vendor/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"></script>
+<script src="vendor/jasny-bootstrap/js/jasny-bootstrap.min.js"></script>
+
+
 <script src="scripts/ucsd/nav.js"></script>
 <script src="scripts/ucsd/drawer.js"></script>
 <script src="scripts/ucsd/copyright.js"></script>
@@ -512,20 +523,6 @@
     // ]]>
 </script>
 
-<!--build:js scripts/vendor.min.js -->
-<script src="vendor/flexslider/jquery.flexslider.js"></script>
-<script src="vendor/fastclick/lib/fastclick.js"></script>
-<script src="vendor/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"></script>
-<!-- endbuild -->
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-<script>
-  // very simple to use!
-  $(document).ready(function() {
-    $('.js-activated').dropdownHover().dropdown();
-  });
-</script>
 
 <!-- Google Search -->
 <script src="https://www.google.com/jsapi"></script>
