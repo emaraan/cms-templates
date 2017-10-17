@@ -47,7 +47,7 @@
 	</section>
 
     <section class="layout-title">
-        <div class="layout-container">
+        <div class="layout-container container">
             <a href="index.html" class="title-header title-header-large">School of Global Policy &amp; Strategy</a>
             <a href="index.html" class="title-header title-header-short">GPS</a>
             <a href="https://www.ucsd.edu" class="title-logo">UC San Diego</a>
@@ -85,12 +85,18 @@
 <nav class="navbar navbar-default navbar-static-top">
 	<div class="container">
 		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body" aria-expanded="false" aria-controls="navbar">
-			    <span class="sr-only">Toggle navigation</span>
-			    <span class="icon-bar"></span>
-			    <span class="icon-bar"></span>
-			    <span class="icon-bar"></span>
-		  </button>
+      <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body" aria-expanded="false" aria-controls="navbar">
+      			    <span class="sr-only">Toggle navigation</span>
+
+      					<div class="col-sm-1" style="padding: 5px; float: left;">
+      				    <span class="icon-bar"></span>
+      				    <span class="icon-bar"></span>
+      				    <span class="icon-bar"></span>
+         				</div>
+          			<div class="col-sm-1" style="font-size: 13px; padding: 2px 0; float: left; color: #FFF;">
+                      MENU
+      			    </div>
+      </button>
 		  <!-- <a class="navbar-brand" href="#">Project name</a> -->
 		</div>
 
@@ -149,21 +155,22 @@
 <!-- end native bootstrap navbar -->
 
 <main class="layout-main" id="main-content" role="main">
+
+  <div class="container">
+    <div class="row">
+      <ol class="breadcrumb breadcrumbs-list">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="templates.html">Templates</a></li>
+          <li class="active">Two Columns</li>
+      </ol>
+    </div>
+  </div>
+
 	<div class="container">
 		<div class="row">
         <section class="col-xs-12 col-md-9 main-section pull-right">
 
-	        <div class="jumbotron side-image-white">
-		        <div class="container">
-			        <div class="row">
-				        <ol class="breadcrumb breadcrumbs-list">
-				            <li><a href="index.html">HOME</a></li>
-				            <li><a href="templates.html">Templates</a></li>
-				            <li class="active">Two Columns</li>
-				        </ol>
-			        </div>
-		        </div>
-	        </div>
+
 
       <!-- Begin Text and CTA w/Full Height Image Right module -->
 			<div class="jumbotron side-image-white" data-module="text-and-cta-with-full-height-image-left">
@@ -463,7 +470,7 @@
 		        </ul>
 	        </div>
 	        <div class="col-sm-4">
-		        <img src="img/ucsd-footer-logo-white.png" alt="" class="img-responsive footer-logo" />
+            <img src="https://cdn.ucsd.edu/cms/decorator-5/styles/img/ucsd-footer-logo-white.png" alt="" class="img-responsive footer-logo" />
 		    </div>
 		</div>
 	</div>
@@ -480,13 +487,13 @@
 <script src="https://www.ucsd.edu/common/_emergency-broadcast/message.js"></script>
 
 
-<!--build:js scripts/base.min.js -->
+<!--build:js scripts/vendor.min.js -->
 <script src="vendor/flexslider/jquery.flexslider.js"></script>
 <script src="vendor/fastclick/lib/fastclick.js"></script>
 <script src="vendor/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"></script>
 <script src="vendor/jasny-bootstrap/js/jasny-bootstrap.min.js"></script>
-
-
+<!-- endbuild -->
+<!--build:js scripts/base.min.js -->
 <script src="scripts/ucsd/nav.js"></script>
 <script src="scripts/ucsd/drawer.js"></script>
 <script src="scripts/ucsd/copyright.js"></script>

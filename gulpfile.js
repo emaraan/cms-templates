@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync');
 var useref = require('gulp-useref');
 var uglify = require('gulp-uglify');
@@ -30,6 +31,10 @@ gulp.task('browserSync', function() {
 gulp.task('sass', function() {
   return gulp.src('app/styles/*.scss') // Gets all files ending with .scss in app/scss and children dirs
     .pipe(sass().on('error', sass.logError)) // Passes it through a gulp-sass, log errors to console
+    .pipe(sourcemaps.init({loadMaps: true}))
+    .pipe(sass())
+    .pipe(sourcemaps.write({includeContent: false}))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('app/css')) // Outputs it in the css folder
     .pipe(gulp.dest('dist/css')) // Outputs it in the css folder
     .pipe(browserSync.reload({ // Reloading with Browser Sync
@@ -40,7 +45,6 @@ gulp.task('sass', function() {
 // Watchers
 gulp.task('watch', function() {
   gulp.watch('app/styles/**/*.scss', ['sass']);
-  gulp.watch('app/*.html', browserSync.reload);
   gulp.watch('app/scripts/**/*.js', browserSync.reload);
 })
 
@@ -108,3 +112,14 @@ gulp.task('build', function(callback) {
     callback
   )
 })
+
+// Dev task with browserSync
+gulp.task('dev', ['browserSync', 'sass'], function() {
+    gulp.watch('app/styles/**/*.scss', ['sass']);
+    //gulp.watch('css/*.css', ['minify-css']);
+    //gulp.watch('app/scripts/**/*.js', ['minify-js']);
+    // Reloads the browser whenever HTML or JS files change
+    gulp.watch("app/*.html").on('change', browserSync.reload);
+    gulp.watch('app/*.html', browserSync.reload);
+    gulp.watch('js/**/*.js', browserSync.reload);
+});

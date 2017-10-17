@@ -144,21 +144,22 @@
 <!-- end native bootstrap navbar -->
 
 <main class="layout-main" id="main-content" role="main">
+
+  <div class="container">
+    <div class="row">
+      <ol class="breadcrumb breadcrumbs-list">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="templates.html">Templates</a></li>
+          <li class="active">Two Columns</li>
+      </ol>
+    </div>
+  </div>
+
 	<div class="container">
 		<div class="row">
         <section class="col-xs-12 col-md-9 main-section pull-right">
 
-	        <div class="jumbotron side-image-white">
-		        <div class="container">
-			        <div class="row">
-				        <ol class="breadcrumb breadcrumbs-list">
-				            <li><a href="index.html">HOME</a></li>
-				            <li><a href="templates.html">Templates</a></li>
-				            <li class="active">Two Columns</li>
-				        </ol>
-			        </div>
-		        </div>
-	        </div>
+
 
       <!-- Begin Text and CTA w/Full Height Image Right module -->
 			<div class="jumbotron side-image-white" data-module="text-and-cta-with-full-height-image-left">
@@ -458,7 +459,7 @@
 		        </ul>
 	        </div>
 	        <div class="col-sm-4">
-		        <img src="img/ucsd-footer-logo-white.png" alt="" class="img-responsive footer-logo" />
+            <img src="https://cdn.ucsd.edu/cms/decorator-5/styles/img/ucsd-footer-logo-white.png" alt="" class="img-responsive footer-logo" />
 		    </div>
 		</div>
 	</div>
@@ -471,6 +472,7 @@
 <script src="https://www.ucsd.edu/common/_emergency-broadcast/message.js"></script>
 
 
+<script src="scripts/vendor.min.js"></script>
 <script src="scripts/base.min.js"></script>
 
 <script type="text/javascript">

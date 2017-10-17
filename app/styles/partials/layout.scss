@@ -16,7 +16,7 @@
 
 html, body
 {
-  background: #fff;
+  background: #FFF;
   overflow-x: hidden;
   color: #333;
   font: normal normal normal 16px/1.7 'Roboto', sans-serif;
@@ -257,8 +257,9 @@ nav
 
 .navbar-toggle {
 	background-color: #006A96;
+  border: none;
 	float: left;
-	margin-left: 15px;
+	margin: 8px 0 8px 20px;
 }
 
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
