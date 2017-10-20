@@ -46,7 +46,7 @@ $(document).ready(function() {
     });
 
     /* open the drawer if the url points to this drawer */
-    $(window).load(function() {
+    $(window).on('load',function() {
       drawer.children("h2").each(function() {
         if (window.location.hash == '#' + $(this).find('a').text().replace(/\s/g, '-').substring(0, 31)) {
           var newPosition = $(this).offset();

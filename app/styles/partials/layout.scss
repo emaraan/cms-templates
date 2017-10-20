@@ -268,6 +268,19 @@ nav
 .navbar-default .navbar-toggle .icon-bar {
     background-color: #fff;
 }
+
+.mobile-nav-bars {
+  padding: 5px; 
+  float: left;
+}
+
+.mobile-nav-icon {
+  font-size: 13px;
+  padding: 2px 0;
+  float: left;
+  color: #FFF;
+}
+
 #search {
 	position: absolute !important;
 	width: 385px;

@@ -11,7 +11,67 @@
       position: absolute;
       top:0;
       left: 10%;
+      transition:all .2s linear;
+         @media screen and (max-width: 1260px) {
+           padding: 5% 0;
+         }
+
+         @media screen and (max-width: $desktop) {
+           padding: 3% 0;
+           left: 5%;
+         }
+
+         @media screen and (max-width: $desktop-small) {
+           padding: 5% 0;
+         }
+
+         @media screen and (max-width: $tablet) {
+           padding: 2% 0;
+         }
+
+         @media screen and (max-width: $mobile) {
+           padding: 0% 0;
+         }
+
+       h1 {
+          @media screen and (max-width: 1160px) {
+            font-size: 40px;
+          }
+          @media screen and (max-width: $desktop-small) {
+            font-size: 2em !important;
+          }
+
+          @media screen and (max-width: $mobile) {
+            font-size: 1.2em !important;
+          }
+       }
+
+       p {
+           @media screen and (max-width: $desktop-small) {
+             display: none;
+           }
+       }
+
+       a.btn {
+
+         @media screen and (max-width: $desktop-small) {
+           margin-left: 35px !important;
+           padding: 8px;
+           min-width: 150px;
+           font-size: 13px;
+         }
+
+       }
   }
+
+  /*.container h1 {
+    @media screen and (max-width: 1160px) {
+      font-size: 40px;
+    }
+    @media screen and (max-width: $desktop-small) {
+      font-size: 2em !important;
+    }
+  }*/
 
 }
 /* Since positioning the image, we need to help out the caption */
@@ -28,6 +88,23 @@
   left: 0;
   width: 100%;
   height: auto;
+}
+
+
+.carousel-control {
+
+     @media screen and (max-width: $desktop) {
+       width: 5%;
+     }
+
+}
+
+.carousel-indicators {
+
+     @media screen and (max-width: $tablet) {
+       display: none;
+     }
+
 }
 
 

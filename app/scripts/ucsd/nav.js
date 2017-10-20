@@ -225,10 +225,10 @@ $(document).ready(function() {
     }
 
     // check to see if the first menu item and last menu item are on the same row
-    var t1 = $('nav .navbar-list>li:first').offset().top;
-    var t2 = $('nav .navbar-list>li:last').offset().top;
+    //var t1 = $('nav .navbar-list>li:first').offset().top;
+    //var t2 = $('nav .navbar-list>li:last').offset().top;
 
-    if (t1 != t2) {
+    /*if (t1 != t2) {
       if (!isMenuWrapped) {
         // menu items are now wrapping
         isMenuWrapped = true;
@@ -238,7 +238,7 @@ $(document).ready(function() {
         $('.navdrawer-container').css('position', 'absolute').css('z-index', '-1').css('opacity', '0').css('overflow-y', 'scroll');
         //$('.navdrawer-container').css('z-index', '-1').css('opacity', '0').css('overflow-y', 'scroll');
       }
-    }
+    }*/
   }
 
   //mainNav();
