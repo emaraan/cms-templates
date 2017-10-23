@@ -162,8 +162,8 @@ $(document).ready(function() {
   var mainSearch = function() {
 
 
-    var searchBtn = $('.search-toggle')[0];
-    var searchContent = $('.search-content')[0];
+    var searchBtn = $('.navbar-static-top .search-toggle')[0];
+    var searchContent = $('.navbar-static-top .search-content')[0];
     var searchOpen = 'search-is-open';
     var isSearchOpen = false;
 

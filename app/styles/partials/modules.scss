@@ -31,9 +31,15 @@
 /* ***********************************************
  * NAVBAR
  * ***************/
-
-
-
+/*
+ul.nav.navbar-nav.navbar-right {
+  @media only screen and (max-width: $desktop-small-after) {
+  background: gray;
+  margin: 0;
+  padding: 0;
+  }
+}
+*/
 /* ***********************************************
  * SEARCH
  * ***************/
