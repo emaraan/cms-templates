@@ -54,6 +54,8 @@ html, body
 
     }
 
+
+
     //
    /*
     @media only screen and (min-width: $desktop-small + 1) {
@@ -98,7 +100,7 @@ html, body
 
       @media only screen and (max-width: $desktop-small) {
         padding: 1em 0;
-        height: 115px;
+        height: auto;
       }
     }
 
@@ -245,6 +247,7 @@ nav
 }
 .dropdown-menu {
 	background-color: darken(#006a96, 10%);
+  border-radius: 0;
 }
 .dropdown-menu > li > a {
 	color: #fff;
@@ -270,7 +273,7 @@ nav
 }
 
 .mobile-nav-bars {
-  padding: 5px; 
+  padding: 5px;
   float: left;
 }
 
@@ -321,6 +324,77 @@ nav
 
 
 li.open {border-bottom: none;}
+
+/*************************************************
+* Mobile Nav and search
+* ****************/
+
+.offcanvas > ul.nav.navbar-nav.navbar-right {
+
+  @media only screen and (max-width: $desktop-small-after) {
+    margin: 0;
+
+      .search {
+        width: 100%;
+      }
+
+      .search-toggle {
+        display: none;
+      }
+
+      .search-content {
+        background-color: #ffffff;
+        border-bottom: 2px solid #BDBDBD;
+      }
+
+      #search{
+        display: block !important;
+        position: relative !important;
+        width: 100%;
+        padding: 10px 15px;
+        overflow: hidden;
+      }
+
+      .search-content .input-group {
+        width: 60%;
+      }
+
+      .search-content .search-scope {
+        width: 34%;
+      }
+
+  }
+
+}
+
+
+@media only screen and (max-width: $desktop-small-after) {
+  .navmenu-default .navmenu-nav > li > a {
+    background-color: #e7e7e7;
+    color: $blue !important;
+  }
+
+  .navmenu-default .navmenu-nav > .open > a {
+    color: $blue !important;
+    border-bottom: 1px solid #CCC;
+
+  }
+
+  .dropdown-menu > li > a {
+    background-color: #FFF !important;
+    color: $blue !important;
+  }
+
+  .navmenu-default .navmenu-nav > .active > a {
+      color: $blue !important;;
+      background-color: #e7e7e7;
+      border-left: 2px solid $blue;
+  }
+
+}
+
+
+
 
 /* ***********************************************
 * MAIN

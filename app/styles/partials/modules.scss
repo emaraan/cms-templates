@@ -134,7 +134,7 @@ ul.nav.navbar-nav.navbar-right {
     display: none;
     @media only screen and (max-width: $mobile) {
 	    display: block;
-	    margin-top: 2.25em;
+	    margin-top: 0;
     }
   }
 
@@ -176,6 +176,7 @@ ul.nav.navbar-nav.navbar-right {
     background-position: -239px -2px;
     height: 45px;
     width: 166px;
+    display: none !important;
   }
 
   @media only screen and (max-width: $desktop-small) {
@@ -183,6 +184,19 @@ ul.nav.navbar-nav.navbar-right {
     position: absolute;
 
   }
+}
+
+
+.header-logo {
+
+  height: 30px;
+  margin: 15px 20px 0 0;
+  width: auto;
+
+  @media only screen and (min-width: $mobile) {
+    display: none;
+  }
+
 }
 
 /* ***********************************************
@@ -256,7 +270,7 @@ ul.nav.navbar-nav.navbar-right {
     &.active {
       background-color: #fff;
       padding: 1em 0 1em 1em;
-	  font-weight: bold;
+      font-weight: bold;
 
 	  > ul li a {
 		  color: #006a96;
