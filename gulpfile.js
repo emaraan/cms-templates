@@ -123,5 +123,5 @@ gulp.task('dev', ['browserSync', 'sass'], function() {
     // Reloads the browser whenever HTML or JS files change
     gulp.watch("app/*.html").on('change', browserSync.reload);
     gulp.watch('app/*.html', browserSync.reload);
-    gulp.watch('js/**/*.js', browserSync.reload);
+    gulp.watch('scripts/**/*.js', browserSync.reload);
 });
