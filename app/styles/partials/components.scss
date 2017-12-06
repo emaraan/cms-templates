@@ -1,8 +1,6 @@
-
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
-/* Carousel base class */
 .carousel {
   margin-bottom: 60px;
 
@@ -10,7 +8,7 @@
       padding: 7% 0;
       position: absolute;
       top:0;
-      left: 10%;
+      left: 19.3%;
       transition:all .2s linear;
          @media screen and (max-width: 1260px) {
            padding: 5% 0;
@@ -92,7 +90,7 @@
 
 
 .carousel-control {
-
+      width: 10%;
      @media screen and (max-width: $desktop) {
        width: 5%;
      }
@@ -116,9 +114,6 @@ button#toggleCarousel {
 
 
 
-/* RESPONSIVE CSS
--------------------------------------------------- */
-
 @media (min-width: 768px) {
 
 
@@ -138,4 +133,49 @@ button#toggleCarousel {
   .featurette-heading {
     margin-top: 120px;
   }
+}
+
+
+.carousel-control.right, .carousel-control.left {
+  background-image: none;
+}
+
+
+/* QuickBlock Carousel
+-------------------------------------------------- */
+
+.qb-carousel {
+
+    .carousel-caption {
+
+      bottom: 20px;
+      padding-bottom: 0;
+      padding-top: 0;
+      text-align: left;
+      left: 0;
+      margin-left: 20px;
+
+        h3{
+          color: #FFF;
+        }
+
+        p {
+          font-size: 15px;
+        }
+
+    }
+
+    .carousel-indicators {
+      bottom: 0;
+      left: auto;
+      list-style: none;
+      margin-left: 0;
+      margin-right: 10px;
+      padding-left: 0;
+      right: 0;
+      text-align: right;
+      width: auto;
+    }
+
+
 }
