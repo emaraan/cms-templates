@@ -4,31 +4,30 @@
 .carousel {
   margin-bottom: 60px;
 
-  .container {
-      padding: 7% 0;
+  .cr-item-container {
       position: absolute;
-      top:0;
-      left: 19.3%;
+      top:20%;
       transition:all .2s linear;
-         @media screen and (max-width: 1260px) {
-           padding: 5% 0;
+      width: inherit;
+         @media screen and (max-width: $xl-deskotp) {
+           top:10%;
          }
 
          @media screen and (max-width: $desktop) {
-           padding: 3% 0;
-           left: 5%;
+           top: 0%;
          }
 
          @media screen and (max-width: $desktop-small) {
-           padding: 5% 0;
+           top:20%;
+           margin: 0 5%;
          }
 
          @media screen and (max-width: $tablet) {
-           padding: 2% 0;
+            top:10%;
          }
 
          @media screen and (max-width: $mobile) {
-           padding: 0% 0;
+           top:5%;
          }
 
        h1 {
@@ -112,6 +111,59 @@ button#toggleCarousel {
     font-size: 14px;
 }
 
+/* ROTATOR BUILDER
+-------------------------------------------------- */
+
+  /*Center Styles */
+
+  .cntr {
+    width: auto !important;
+    margin: 5% auto !important;
+    display: block;
+    text-align: center;
+    padding: 0;
+  }
+
+  .cntr-btn {
+    margin: 0 auto !important;
+    display: block;
+    text-align: center;
+    width: max-content;
+  }
+
+  /* Background color */
+
+  .rt-dark-blue {
+    background-color: #182B49 !important;
+  }
+
+  .rt-light-blue {
+    background-color: #006A96 !important;
+  }
+
+  .rt-neutral-gray {
+    background-color: #747678 !important;
+  }
+
+
+  /* Accent color */
+
+  .rt-btn-gold {
+    background-color: #C69214 !important;
+    color: #FFF !important;
+  }
+
+  .rt-btn-cyan {
+    background-color: #00C6D7 !important;
+  }
+
+  .rt-btn-yellow {
+    background-color: #FFCD00 !important;
+  }
+
+  .rt-btn-orange {
+    background-color: #FC8900 !important;
+  }
 
 
 @media (min-width: 768px) {

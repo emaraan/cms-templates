@@ -252,7 +252,8 @@
 	background-color: $blue;
 	padding: 30px 0 !important;
 	border-radius: 0 !important;
-	h2, h3, p, li, a, a:hover {color: #fff;}
+	h2, h3, p, li, a:hover {color: #fff;}
+	a {color: #FFF; text-decoration: underline;}
 	.panel {
 		background-color: transparent;
 		margin: 0 15px 20px 15px;
