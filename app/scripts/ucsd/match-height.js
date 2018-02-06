@@ -1,5 +1,5 @@
 $(function() {
-  $('.cta-two-three > .panel-text, .panel-news-title').matchHeight({
+  $('.cta-two-three, .panel-news-title').matchHeight({
       property: 'min-height'
   });
 
