@@ -227,7 +227,7 @@
 /* Callout Image Small Inset */
 
 .jumbotron-callout-image-small-inset {
-	background-image: url("../img/callout-content-two-bg.jpg");
+	background-image: url("img/callout-content-two-bg.jpg");
 	background-position: center center;
 	background-size: cover;
 	padding: 48px 0 !important;
@@ -250,12 +250,14 @@
 
 .jumbotron-callout-content-one {
 	background-color: $blue;
+	background-image: url("img/bg-dark-blue-trident-full.png");
+  background-position: center;
 	padding: 30px 0 !important;
 	border-radius: 0 !important;
 	h2, h3, p, li, a:hover {color: #fff;}
 	a {color: #FFF; text-decoration: underline;}
 	.panel {
-		background-color: transparent;
+		background-color: transparent !important;
 		margin: 0 15px 20px 15px;
 	}
 	.panel.panel-primary .panel-body {
@@ -275,7 +277,7 @@
 /* Callout Content Two */
 
 .jumbotron-callout-content-two {
-	background-image: url("../img/callout-content-two-bg.jpg");
+	background-image: url("img/callout-content-two-bg.jpg");
 	background-position: center center;
 	background-size: cover;
 	padding: 48px 0 !important;
@@ -304,4 +306,13 @@
 }
 .panel-primary .text-link {
     border-bottom: 1px #fff solid;
+}
+
+/* Jumbotron full-width */
+
+.jumbotron-full-width {
+    background-image: url("img/bg-light-yellow-trident.png");
+    background-position: top right;
+    background-color: #f5f5f5;
+    padding: 2em !important;
 }

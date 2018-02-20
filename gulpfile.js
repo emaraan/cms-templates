@@ -11,10 +11,6 @@ var cache = require('gulp-cache');
 var del = require('del');
 var runSequence = require('run-sequence');
 
-// Basic Gulp task syntax
-gulp.task('hello', function() {
-  console.log('Hello Zell!');
-})
 
 // Development Tasks
 // -----------------
