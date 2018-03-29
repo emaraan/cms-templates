@@ -128,7 +128,7 @@ button:active {
   background-color: #006a96 !important;
   border: none !important;
   &:hover {
-	  background-color: darken(#006a96, 10%) !important; 
+	  background-color: darken(#006a96, 10%) !important;
   }
   @media only screen and (max-width: $desktop) {
     border: 0;
@@ -192,7 +192,7 @@ button:active {
   .navdrawer-container ul.navbar-sublist {
     display: none;
     position: absolute;
-    font-size: 14px; 
+    font-size: 14px;
 
     @media only screen and (max-width: $desktop) {
       display: block;
@@ -385,6 +385,10 @@ nav.navdrawer-container.navbar-is-opened {
 .collapse-navbar .search-content {
   position: relative;
   width: 100%;
+}
+
+ul.nav.navbar-nav.navbar-right {
+    margin-right: 0 !important;
 }
 
 /* Blink & TL Styles */

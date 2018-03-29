@@ -412,7 +412,7 @@ main
     margin-bottom: 1em;
     @media only screen and (max-width: $desktop-small) {
       width:100%;
-      padding: 0 0 1em;
+      padding: 0 15px 1em;
     }
   }
 
@@ -472,7 +472,7 @@ footer
   }
 
 .footer .row {
-	padding: 1.5em .5em;
+	padding: 1.5em 0;
 	color: #fff;
 	font-size: .9em;
 }

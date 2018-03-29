@@ -319,5 +319,16 @@
     background-image: url("img/bg-light-yellow-trident.png");
     background-position: top right;
     background-color: #f5f5f5;
+		border-radius: 0 !important;
     padding: 2em !important;
+}
+
+.jumbotron-full-width-ni {
+    background-color: #f5f5f5;
+		border-radius: 0 !important;
+    padding: 2em !important;
+
+		h2{
+			margin: 0 0 30px 0;
+		}
 }
