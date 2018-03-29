@@ -12,8 +12,8 @@ var del = require('del');
 var runSequence = require('run-sequence');
 
 
-// Development Tasks ----------------------------------------
-// -----------------------------------------------------------
+// Development Tasks
+// -----------------
 
 // Start browserSync server
 gulp.task('browserSync', function() {
@@ -44,8 +44,8 @@ gulp.task('watch', function() {
   gulp.watch('app/scripts/**/*.js', browserSync.reload);
 })
 
-// Optimization Tasks ----------------------------------------
-// -----------------------------------------------------------
+// Optimization Tasks
+// ------------------
 
 // Optimizing CSS and JavaScript
 gulp.task('useref', function() {
@@ -93,8 +93,8 @@ gulp.task('clean:dist', function() {
   return del.sync(['dist/**/*', '!dist/images', '!dist/images/**/*']);
 });
 
-// Build Sequences --------------------------------------------
-// -----------------------------------------------------------
+// Build Sequences
+// ---------------
 
 gulp.task('default', function(callback) {
   runSequence(['sass', 'browserSync'], 'watch',
@@ -111,12 +111,12 @@ gulp.task('build', function(callback) {
   )
 })
 
-// Live Development with BrowserSync --------------------------------------------
-// -----------------------------------------------------------
-
+// Dev task with browserSync
 gulp.task('dev', ['browserSync', 'sass'], function() {
-    // Reloads the browser whenever CSS, HTML or JS files change
     gulp.watch('app/styles/**/*.scss', ['sass']);
+    //gulp.watch('css/*.css', ['minify-css']);
+    //gulp.watch('app/scripts/**/*.js', ['minify-js']);
+    // Reloads the browser whenever HTML or JS files change
     gulp.watch("app/*.html").on('change', browserSync.reload);
     gulp.watch('app/*.html', browserSync.reload);
     gulp.watch('scripts/**/*.js', browserSync.reload);
