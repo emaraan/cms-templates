@@ -12,7 +12,7 @@
 /* header */
 .drawer h2 {
 	//border-top: 1px solid #ccc;
-	text-transform: capitalize;
+	text-transform: none;
 	font-weight: normal;
 	font-size: 20px;
 	margin-top: 0;
@@ -53,7 +53,7 @@
 
 /* hover state */
 .drawer h2:hover,.drawer h2:active {
-	background-color: transparent; 
+	background-color: transparent;
 	cursor: pointer;
 	color: #fff;
 }
