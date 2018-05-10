@@ -10,6 +10,7 @@ var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
 var del = require('del');
 var runSequence = require('run-sequence');
+var zip = require('gulp-zip');
 
 
 // Development Tasks ----------------------------------------
@@ -50,7 +51,7 @@ gulp.task('watch', function() {
 // Optimizing CSS and JavaScript
 gulp.task('useref', function() {
 
-  return gulp.src('app/*.html')
+  return gulp.src('./app/**/*.html')
     .pipe(useref())
     .pipe(gulpIf('*.js', uglify()))
     .pipe(gulpIf('*.css', cssnano({
@@ -95,6 +96,16 @@ gulp.task('clean:dist', function() {
 
 // Build Sequences --------------------------------------------
 // -----------------------------------------------------------
+
+
+// Archive distribution package
+
+gulp.task('zip', () =>
+    gulp.src('dist/**/*')
+        .pipe(zip('Decorator-V5.zip'))
+        .pipe(gulp.dest('.'))
+);
+
 
 gulp.task('default', function(callback) {
   runSequence(['sass', 'browserSync'], 'watch',
