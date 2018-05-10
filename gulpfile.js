@@ -11,7 +11,15 @@ var cache = require('gulp-cache');
 var del = require('del');
 var runSequence = require('run-sequence');
 var zip = require('gulp-zip');
+//var banner = require('gulp-banner');
 
+// Banner Info ----------------------------------------
+// -----------------------------------------------------------
+
+//Include package.json
+var pkg = require('./package.json');
+
+var decoVersion = pkg.version;
 
 // Development Tasks ----------------------------------------
 // -----------------------------------------------------------
@@ -94,37 +102,25 @@ gulp.task('clean:dist', function() {
   return del.sync(['dist/**/*', '!dist/images', '!dist/images/**/*']);
 });
 
-// Build Sequences --------------------------------------------
-// -----------------------------------------------------------
-
-
-// Archive distribution package
+// Archives distribution package
 
 gulp.task('zip', () =>
     gulp.src('dist/**/*')
-        .pipe(zip('Decorator-V5.zip'))
+        .pipe(zip('Decorator-V' + decoVersion + '.zip'))
         .pipe(gulp.dest('.'))
 );
 
+// Build Sequences --------------------------------------------
+// -----------------------------------------------------------
 
+//Default
 gulp.task('default', function(callback) {
   runSequence(['sass', 'browserSync'], 'watch',
     callback
   )
 })
 
-gulp.task('build', function(callback) {
-  runSequence(
-    'clean:dist',
-    'sass',
-    ['useref', 'images', 'fonts'],
-    callback
-  )
-})
-
-// Live Development with BrowserSync --------------------------------------------
-// -----------------------------------------------------------
-
+// Live Development with BrowserSync
 gulp.task('dev', ['browserSync', 'sass'], function() {
     // Reloads the browser whenever CSS, HTML or JS files change
     gulp.watch('app/styles/**/*.scss', ['sass']);
@@ -132,3 +128,13 @@ gulp.task('dev', ['browserSync', 'sass'], function() {
     gulp.watch('app/*.html', browserSync.reload);
     gulp.watch('scripts/**/*.js', browserSync.reload);
 });
+
+// Final Build Task
+gulp.task('build', function(callback) {
+  runSequence(
+    'clean:dist',
+    'sass',
+    ['useref', 'images', 'fonts','zip'],
+    callback
+  )
+})
