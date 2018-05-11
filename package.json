@@ -1,6 +1,6 @@
 {
-  "name": "cms-templates-5",
-  "version": "1.0.0",
+  "name": "Decorator-V5",
+  "version": "5.0.2",
   "description": "Front end files for the UCSD Cascade CMS templates.",
   "main": "index.js",
   "scripts": {
@@ -12,9 +12,7 @@
   },
   "keywords": [
     "CMS",
-    "CMS",
     "templates",
-    "Decorator",
     "Decorator",
     "5"
   ],
@@ -32,6 +30,7 @@
     "gulp-sourcemaps": "^2.6.1",
     "gulp-uglify": "^3.0.0",
     "gulp-useref": "^3.1.2",
+    "gulp-zip": "^4.1.0",
     "run-sequence": "^2.2.0"
   },
   "dependencies": {
