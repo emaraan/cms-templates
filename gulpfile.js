@@ -88,7 +88,7 @@ gulp.task('fonts', function() {
 
 gulp.task('build-images', function() {
   return gulp.src('app/styles/images/*.{gif,jpg,png,svg}')
-      .pipe(gulp.dest('dist/images'));
+      .pipe(gulp.dest('dist/img'));
 });
 
 // Cleaning
@@ -124,8 +124,8 @@ gulp.task('default', function(callback) {
 gulp.task('dev', ['browserSync', 'sass'], function() {
     // Reloads the browser whenever CSS, HTML or JS files change
     gulp.watch('app/styles/**/*.scss', ['sass']);
-    gulp.watch("app/*.html").on('change', browserSync.reload);
-    gulp.watch('app/*.html', browserSync.reload);
+    gulp.watch("app/**/*.html").on('change', browserSync.reload);
+    gulp.watch('app/**/*.html', browserSync.reload);
     gulp.watch('scripts/**/*.js', browserSync.reload);
 });
 
@@ -134,7 +134,8 @@ gulp.task('build', function(callback) {
   runSequence(
     'clean:dist',
     'sass',
-    ['useref', 'images', 'fonts','zip'],
+    ['useref', 'fonts', 'build-images'],
+    'zip',
     callback
   )
 });

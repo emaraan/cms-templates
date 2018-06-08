@@ -10,3 +10,8 @@ function initFooter(feedbackUrl) {
 	$(footerFeedback).empty();
 	$(footerFeedback).append(feedback_url);
 };
+
+/* Footer Year and Logout URL */
+
+initCopyright();
+initLogout('http://www.ucsd.edu');

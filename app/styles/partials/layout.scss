@@ -249,9 +249,11 @@ nav
 .dropdown-menu {
 	background-color: darken(#006a96, 10%);
   border-radius: 0;
+  padding: 0;
 }
 .dropdown-menu > li > a {
 	color: #fff;
+  padding: 6px 20px;
 }
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
@@ -288,6 +290,17 @@ nav
 #search {
 	position: absolute !important;
 	width: 385px;
+}
+
+/*Dropdown Hover Fallback */
+
+@media only screen and (min-width:767px) {
+  #navbar > .navbar-nav > .dropdown:hover .dropdown-menu {
+    display: block;
+ }
+  #navbar > .navbar-nav > li:hover > a {
+    background-color: #014663 !important;
+ }
 }
 
 // offcanvas overrides

@@ -364,3 +364,15 @@ button#toggleCarousel {
 .social-list li.wordpress {
   background-position: 0 -520px;
 }
+
+/* Blockquote Footer Reset*/
+
+blockquote > footer {
+    background-color: transparent;
+}
+
+/* Full Calendar */
+
+#calendar {
+  margin: 20px 0;
+}
