@@ -14,4 +14,4 @@ function initFooter(feedbackUrl) {
 /* Footer Year and Logout URL */
 
 initCopyright();
-initLogout('http://www.ucsd.edu');
+//initLogout('http://www.ucsd.edu');
