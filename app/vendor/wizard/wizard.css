@@ -10,7 +10,7 @@
     margin: 0;
     text-align: center;
     list-style-type: none;
-    background: transparent url(../../img/sprite_wizard.png) center -185px no-repeat
+    background: transparent url(../../css/img/sprite_wizard.png) center -185px no-repeat
 }
 
 .wizard li.current {

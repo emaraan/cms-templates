@@ -87,7 +87,12 @@ gulp.task('fonts', function() {
 // Copy images
 
 gulp.task('build-images', function() {
-  return gulp.src('app/styles/images/*.{gif,jpg,png,svg}')
+  return gulp.src('app/css/img/*.{gif,jpg,png,svg}')
+      .pipe(gulp.dest('dist/img'));
+});
+
+gulp.task('build-images', function() {
+  return gulp.src('app/img/*.{gif,jpg,png,svg}')
       .pipe(gulp.dest('dist/img'));
 });
 
