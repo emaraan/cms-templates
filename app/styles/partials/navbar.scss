@@ -398,7 +398,11 @@ a.navbar-brand {
 /* Blink & TL Styles */
 
 .blink-nav-button {
+<<<<<<< HEAD
   background: #FDFDFD url(http://cdn.ucsd.edu/developer/decorator/4.5.4/styles/img/blink_nav.png) 0 6px no-repeat !important;
+=======
+  background: #FDFDFD url(http://cdn.ucsd.edu/developer/decorator/4.5.4/styles/../img/blink_nav.png) 0 6px no-repeat !important;
+>>>>>>> develop
   min-width: 78px;
 
     a {
@@ -409,7 +413,11 @@ a.navbar-brand {
 }
 
 .tlink-nav-button {
+<<<<<<< HEAD
   background: #FDFDFD url(http://cdn.ucsd.edu/developer/decorator/4.5.4/styles/img/current_students_nav.png) 0 6px no-repeat !important;
+=======
+  background: #FDFDFD url(http://cdn.ucsd.edu/developer/decorator/4.5.4/styles/../img/current_students_nav.png) 0 6px no-repeat !important;
+>>>>>>> develop
   min-width: 103px;
 
     a {

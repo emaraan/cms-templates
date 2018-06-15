@@ -101,7 +101,11 @@ a:hover,a:active,
 
 /* external links */
 a[target="_blank"] {
+<<<<<<< HEAD
 	background: url(img/sprite_icon.png) no-repeat scroll right -50px transparent;
+=======
+	background: url(../img/sprite_icon.png) no-repeat scroll right -50px transparent;
+>>>>>>> develop
 	padding-right: 20px;
 }
 

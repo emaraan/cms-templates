@@ -37,7 +37,11 @@ FLEXSLIDER
 /* search bar icon fallback */
 
 #tdr_search_toggle {
+<<<<<<< HEAD
   *background: url("http://qa.ucsd.edu/common/cwp/4.0.0/styles/img/search_ie_icon.png")  no-repeat 0px 6px !important;
+=======
+  *background: url("http://qa.ucsd.edu/common/cwp/4.0.0/styles/../img/search_ie_icon.png")  no-repeat 0px 6px !important;
+>>>>>>> develop
   *width: 22px !important;
 }
 /* Just because we're nice */

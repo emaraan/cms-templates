@@ -36,7 +36,11 @@ body {
 	display: block;
 	overflow: hidden;
 	text-indent: -999em;
+<<<<<<< HEAD
 	background: transparent url(img/sprite_base.png) no-repeat;
+=======
+	background: transparent url(../img/sprite_base.png) no-repeat;
+>>>>>>> develop
 	left: 0;
 	top: 10px;
 	background-position: -239px -14px;
@@ -56,7 +60,11 @@ body {
 	}
 
 	@media screen and (-webkit-min-device-pixel-ratio:2) {
+<<<<<<< HEAD
 		background-image: url(img/sprite_base2x.png);
+=======
+		background-image: url(../img/sprite_base2x.png);
+>>>>>>> develop
 		background-size: 500px 120px;
 	}
 
@@ -131,7 +139,11 @@ body {
 	}
 
 	#tdr_title_menu_link {
+<<<<<<< HEAD
 		background: url(img/sprite_base.png) no-repeat scroll -461px -47px transparent;
+=======
+		background: url(../img/sprite_base.png) no-repeat scroll -461px -47px transparent;
+>>>>>>> develop
 		right: 0;
 	}
 
