@@ -1,0 +1,81 @@
+<system-data-structure>
+	<text default="news-with-images" field-id="cc9359640aaf692c3ea1383daecf97bc" identifier="module-id" required="true" restrict-to-groups="Administrator"/>
+	<group identifier="news-with-images" label="Upcoming Events">
+		<text field-id="cc9359640aaf692c3ea1383db879724f" identifier="headline" label="Headline"/>
+		<text default="View All News" field-id="cc9359640aaf692c3ea1383d91088a46" identifier="view-all-label" label="View All Link Label"/>
+		<text default="Internal" field-id="cc9359640aaf692c3ea1383dc3102ade" identifier="internal-external" label="Internal or External Link" type="radiobutton">
+			<radio-item show-fields="news-with-images/view-all" value="Internal"/>
+			<radio-item show-fields="news-with-images/external-news-page" value="External"/>
+		</text>
+		<asset field-id="cc9359640aaf692c3ea1383dce4e86a8" help-text="Won't Display View All Link if Left Blank" identifier="view-all" label="View All Link" type="page"/>
+		<text field-id="cc9359640aaf692c3ea1383d7c3d991a" help-text="Won't Display View All Link if Left Blank" identifier="external-news-page" label="External News Page"/>
+		<text default="call-to-action" field-id="cc9359640aaf692c3ea1383d6f7d0a5d" identifier="news-type" label="Select news display type" type="radiobutton">
+			<radio-item label="Dedicated link text" show-fields="news-with-images/news-item, news-with-images/news-item/date, news-with-images/news-item/headline, news-with-images/news-item/link-text, news-with-images/news-item/link-type, news-with-images/news-item/image, news-with-images/news-item/img-alt" value="call-to-action"/>
+			<radio-item label="Headline as link text" show-fields="news-with-images/news-item, news-with-images/news-item/date, news-with-images/news-item/headline, news-with-images/news-item/link-type, news-with-images/news-item/image, news-with-images/news-item/img-alt" value="headline"/>
+			<radio-item label="Automated News Feed" show-fields="news-with-images/news-feed" value="feed"/>
+		</text>
+		<group identifier="news-item" label="News Item" maximum-number="3" minimum-number="3" multiple="true">
+			<text field-id="cc9359640aaf692c3ea1383dddaa4c3e" help-text="Date Format: July 1 or July 1 - 2" identifier="date" label="Date"/>
+			<text field-id="cc9359640aaf692c3ea1383dc7f212a5" identifier="headline" label="Headline"/>
+			<text default="Read More" field-id="cc9359640aaf692c3ea1383d17e9fa8c" identifier="link-text" label="Link Text"/>
+			<text default="Internal" field-id="cc9359640aaf692c3ea1383d0bb87567" identifier="link-type" label="Link Type" type="radiobutton">
+				<radio-item show-fields="news-with-images/news-item/internal-link" value="Internal"/>
+				<radio-item show-fields="news-with-images/news-item/external-link" value="External"/>
+			</text>
+			<asset field-id="cc9359640aaf692c3ea1383db1e92553" identifier="internal-link" label="Internal Link" type="page,file,symlink"/>
+			<text field-id="cc9359640aaf692c3ea1383d11d34579" help-text="Won't Display View All Link if Left Blank" identifier="external-link" label="External Link"/>
+			<asset field-id="cc9359640aaf692c3ea1383dac92dc75" identifier="image" label="Image" type="file"/>
+			<text field-id="cc9359640aaf692c3ea1383d2fdef0ac" help-text="For Accessibility Purposes " identifier="img-alt" label="Image Description (Alt Text)"/>
+		</group>
+		<group identifier="news-feed" label="Automated News Feed">
+			<text field-id="7ef02c960aaf6b9871452c626819817e" help-text="Select categories to display news items from today.ucsd.edu. Will display the three most recent articles." identifier="feed-categories" label="News Feed Categories" type="checkbox">
+				<checkbox-item label="Campus News" value="174"/>
+				<checkbox-item label="Arts and Humanities" value="75"/>
+				<checkbox-item label="Biological Sciences" value="79"/>
+				<checkbox-item label="Extension" value="82"/>
+				<checkbox-item label="Global Policy and Strategy" value="100"/>
+				<checkbox-item label="Library" value="85"/>
+				<checkbox-item label="Physical Sciences" value="78"/>
+				<checkbox-item label="Rady School of Management" value="81"/>
+				<checkbox-item label="School of Medicine" value="84"/>
+				<checkbox-item label="Social Sciences" value="77"/>
+				<checkbox-item label="The Herbert Wertheim School of Public Health and Human Longevity Science" value="113"/>
+			</text>
+			<text field-id="7f2bdf4f0aaf692c05c81e124b0f122f" identifier="admin-feed-categories" label="ADMIN News Feed Categories" restrict-to-groups="P--Administrator, P--University-Communications" type="checkbox">
+				<checkbox-item label="Books &amp; Culture" value="177"/>
+				<checkbox-item label="Events &amp; Happenings" value="178"/>
+				<checkbox-item label="Visual &amp; Performing Arts" value="179"/>
+				<checkbox-item label="At Work" value="172"/>
+				<checkbox-item label="Athletics" value="173"/>
+				<checkbox-item label="Giving" value="175"/>
+				<checkbox-item label="Student Life" value="176"/>
+				<checkbox-item label="Awards &amp; Accolades" value="168"/>
+				<checkbox-item label="In Memoriam" value="169"/>
+				<checkbox-item label="Milestones" value="170"/>
+				<checkbox-item label="Profiles" value="171"/>
+				<checkbox-item label="Insights &amp; Experts" value="180"/>
+				<checkbox-item label="Opinion" value="181"/>
+				<checkbox-item label="Q&amp;A" value="182"/>
+				<checkbox-item label="Halıcıoğlu Data Science Institute" value="112"/>
+				<checkbox-item label="Jacobs School of Engineering" value="76"/>
+				<checkbox-item label="Qualcomm Institute / Calit2" value="86"/>
+				<checkbox-item label="San Diego Supercomputer Center" value="87"/>
+				<checkbox-item label="Scripps Oceanography" value="80"/>
+				<checkbox-item label="Skaggs School of Pharmacy and Pharmaceutical Sciences" value="83"/>
+				<checkbox-item label="COVID-19" value="109"/>
+				<checkbox-item label="Return to Learn" value="109|110"/>
+				<checkbox-item label="Climate Change" value="114"/>
+				<checkbox-item label="Environment" value="88"/>
+				<checkbox-item label="Business &amp; Economics Research" value="162"/>
+				<checkbox-item label="Health &amp; Behavior Research" value="163"/>
+				<checkbox-item label="Humanities Research" value="164"/>
+				<checkbox-item label="Politics &amp; Society Research" value="165"/>
+				<checkbox-item label="Science &amp; Environment Research" value="166"/>
+				<checkbox-item label="Technology &amp; Engineering Research" value="167"/>
+				<checkbox-item label="The Arts Research" value="161"/>
+				<checkbox-item label="Alumni" value="187"/>
+				<checkbox-item label="Magazine" value="188"/>
+			</text>
+		</group>
+	</group>
+</system-data-structure>

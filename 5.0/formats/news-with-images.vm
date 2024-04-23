@@ -1,0 +1,215 @@
+#macro(NewsImg)
+
+#set ($NewsImg = $_XPathTool.selectSingleNode($node, 'default/content/system-data-structure/news-with-images'))
+
+
+#set($NiAllNews = "")
+#set ($NiLinkCheck = $NewsImg.getChild("internal-external").text)
+#if ($NiLinkCheck == "Internal")
+#set ($NiAllNews = $NewsImg.getChild("view-all").getChild("link").text)
+#elseif ($NiLinkCheck == "External")
+#set ($NiAllNews = $NewsImg.getChild("external-news-page").text)
+#end
+#set ($NiHeadline = $NewsImg.getChild("headline").text)
+#set ($NiAllNewsLabel = $NewsImg.getChild("view-all-label").text)
+#set ($NewsType = $NewsImg.getChild("news-type").text)
+#set ($NewsItems = $_XPathTool.selectNodes($NewsImg, 'news-item'))
+
+<section class="jumbotron jumbotron-gray jumbotron-news" aria-label="News Section">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-8">
+            #if($NiHeadline && !$NiHeadline.isEmpty())
+                <h2>$_EscapeTool.xml($NiHeadline)</h2>
+            #end
+            </div>
+
+            <div class="col-xs-4 view-all-link text-right">
+                #if($NiAllNews !="")
+                <a href="$_EscapeTool.xml($NiAllNews)" class="text-link">$_EscapeTool.xml($NiAllNewsLabel)</a>
+                #end
+            </div>
+        </div>
+        <div class="row">
+            #if ($NewsType == "feed")
+                #set ($NewsFeed = $_XPathTool.selectSingleNode($NewsImg, 'news-feed'))
+                #set ($FeedCategories = $_XPathTool.selectNodes($NewsFeed, 'feed-categories/value'))
+                #set ($AdminFeedCategories = $_XPathTool.selectNodes($NewsFeed, 'admin-feed-categories/value'))
+                #set ($categoryString = "")
+                
+                #if ($FeedCategories.size() > 0)
+                    #foreach ($category in $FeedCategories)
+                        #set ($categoryString = $categoryString + $category.value)
+                        #if($foreach.hasNext)
+                            #set ($categoryString = $categoryString + "|")
+                        #end
+                    #end
+                #end
+                
+                #if ($AdminFeedCategories.size() > 0)
+                    #if(!$_PropertyTool.isEmpty($categoryString))
+                        #set ($categoryString = $categoryString + "|")
+                    #end
+                    #foreach ($category in $AdminFeedCategories)
+                        #set ($categoryString = $categoryString + $category.value)
+                        #if($foreach.hasNext)
+                            #set ($categoryString = $categoryString + "|")
+                        #end
+                    #end
+                #end
+                
+                #generateNewsFeed($categoryString)
+            #else
+                #foreach($NewsItem in $NewsItems)
+
+                #set ($NiDate = $NewsItem.getChild("date").text)
+                #set ($NiHeadline = $NewsItem.getChild("headline").text)
+                #set ($NiLinkText = $NewsItem.getChild("link-text").text)
+                #set ($NiLinkCheck = $NewsItem.getChild("link-type").text)
+
+                #if ($NiLinkCheck == "Internal")
+                    #set ($NiLink = $NewsItem.getChild("internal-link").getChild("link").text)
+                #else
+                    #set ($NiLink = $NewsItem.getChild("external-link").text)
+                #end
+
+                #set ($NiimgAlt = $NewsItem.getChild("img-alt").text)
+                #set ($NiImg = $NewsItem.getChild("image").getChild("path").text)
+                
+                #if ($NiImg == "/")
+                    #set ($NiImg = "https://cdn.ucsd.edu/cms/decorator-5/img/news-388x246.png")
+                #end
+
+                <div class="col-sm-4">
+                    <a href="$_EscapeTool.xml($NiLink)" class="panel panel-default" alt="link to news item">
+                        <img class="img-responsive" src="$_EscapeTool.xml($NiImg)" alt="$_EscapeTool.xml($NiimgAlt)" />
+                        <div class="panel-heading">
+                            <p class="panel-news-date small">$_EscapeTool.xml($NiDate)</p>
+                            <h3 class="panel-news-title">$_EscapeTool.xml($NiHeadline)</h3>
+                        </div>
+                        #if ($NewsType == "call-to-action")
+                        <div class="panel-body">$_EscapeTool.xml($NiLinkText)</div>
+                        #end
+                    </a>
+                </div>
+                #end
+            #end
+        </div>
+    </div>
+</section>
+
+#end
+
+#macro(generateNewsFeed $feedCategoryString)
+    #set($categoryStringReplace = $feedCategoryString.replace('|',''))
+    <div class="col-sm-4">
+        <a class="panel panel-default url0-${categoryStringReplace}" alt="link to news item">
+            <img alt="" class="img-responsive" id="img0-${categoryStringReplace}" />
+            <div class="panel-heading">
+                <p class="panel-news-date small" id="date0-${categoryStringReplace}">&#160;</p>
+                <h3 class="panel-news-title" id="head0-${categoryStringReplace}">&#160;</h3>
+            </div>
+        </a>
+    </div>    
+      
+    <div class="col-sm-4"> 
+        <a class="panel panel-default url1-${categoryStringReplace}" alt="link to news item">
+            <img alt="" class="img-responsive" id="img1-${categoryStringReplace}" />
+            <div class="panel-heading">
+                <p class="panel-news-date small" id="date1-${categoryStringReplace}">&#160;</p>
+                <h3 class="panel-news-title" id="head1-${categoryStringReplace}">&#160;</h3>
+            </div>
+        </a>
+    </div>    
+    
+    <div class="col-sm-4">  
+        <a class="panel panel-default url2-${categoryStringReplace}" alt="link to news item">
+            <img alt="" class="img-responsive" id="img2-${categoryStringReplace}" />
+            <div class="panel-heading">
+                <p class="panel-news-date small" id="date2-${categoryStringReplace}">&#160;</p>
+                <h3 class="panel-news-title" id="head2-${categoryStringReplace}">&#160;</h3>
+            </div>
+        </a>
+    </div>
+
+    <![CDATA[#protect
+    <script>
+    var url = "https://today.ucsd.edu/news-and-features-api?category=${feedCategoryString}&limit=3";
+    
+    getData(url);
+    
+    function getData(theurl) {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.open("GET", theurl, true);
+        xmlhttp.onload = function() {
+            if (xmlhttp.readyState == XMLHttpRequest.DONE) {
+              if (xmlhttp.status == 200) {
+                 var newsData = JSON.parse(xmlhttp.responseText);
+                 
+                 for (var index = 0; index < 3; index++) {
+                    var headId = "head" + index + "-${categoryStringReplace}";
+                    var imgId = "img" + index + "-${categoryStringReplace}";
+                    var dateId = "date" + index + "-${categoryStringReplace}";
+                    var urlId = "url" + index + "-${categoryStringReplace}";
+                    
+                    if (newsData[index].entry_date >= 1660546800000) {
+                       if (newsData[index].teaser_photo) {
+                           image = newsData[index].teaser_photo;
+                           var lastSegIndex = image.lastIndexOf('/');
+                           var firstSeg = image.slice(0, lastSegIndex);
+                           var lastSeg = image.slice(lastSegIndex)
+                           var feedImage = firstSeg + '/_ucsd-feed' + lastSeg;
+                           image = feedImage;
+                       }
+                       else {
+                            image = "https://cdn.ucsd.edu/cms/decorator-5/img/news-placeholder.png";
+                       }
+                    } else {
+                       if (newsData[index].feature_image) {
+                          image = newsData[index].feature_image;
+                       } else if (newsData[index].primary_photo) {
+                          image = newsData[index].primary_photo;
+                       } else {
+                          image = "https://cdn.ucsd.edu/cms/decorator-5/img/news-placeholder.png";
+                       }
+                    }
+                    document.getElementById(imgId).src = image;
+				        document.getElementById(headId).innerText = newsData[index].title;
+                    document.getElementById(dateId).innerText = timeConverter(newsData[index].entry_date);
+                    var urls = document.getElementsByClassName(urlId);
+                    var newsUrl = "https://today.ucsd.edu" + "/story/" + newsData[index].url_title;
+                    for (var j = 0; j < urls.length; j++) {
+                       urls[j].setAttribute("href", newsUrl);
+                   }
+                   if (newsData[index].pp_alt) {
+                     document.getElementById(imgId).alt = newsData[index].pp_alt;
+                  }
+                }
+              }
+              else if (xmlhttp.status == 400) {
+                  console.log('Status: Error 400 returned');
+              }
+              else {
+                   console.log('Status:' + xmlhttp.status);
+              }
+            }
+        };
+    
+        xmlhttp.send();
+    }
+
+    function timeConverter(UNIX_timestamp){
+      var a = new Date(UNIX_timestamp);
+      var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+      var year = a.getFullYear();
+      var month = months[a.getMonth()];
+      var date = a.getDate();
+      var hour = a.getHours();
+      var min = a.getMinutes();
+      var sec = a.getSeconds();
+      var time = month + ' ' + date + ', ' + year;
+      return time;
+    }
+    </script>
+    #protect]]>
+#end
